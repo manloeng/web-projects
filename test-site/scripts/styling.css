@@ -1,12 +1,15 @@
 header, section, footer, aside, nav,figure, figcaption {
 	display: block;
 }
+
 body {
 	color:#666666;
-	background-color: f9f8f6;
+	background-color: #efefef;
 	background-image: '#';
 	background-position: center;
 	font-family: '#';
+	font-size: 80%
+	letter-spacing:0.15em;
 	line-height: 1.4em;
 	margin: 0px;
 }
@@ -17,6 +20,7 @@ body {
 	border: 2px solid #000000;
 	background-color: #ffffff;
 }
+
 
 p {
 	text-decoration: underline;
