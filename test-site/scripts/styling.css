@@ -1,0 +1,23 @@
+header, section, footer, aside, nav,figure, figcaption {
+	display: block;
+}
+body {
+	color:#666666;
+	background-color: f9f8f6;
+	background-image: '#';
+	background-position: center;
+	font-family: '#';
+	line-height: 1.4em;
+	margin: 0px;
+}
+
+.wrapper {
+	width: 940px;
+	margin: 20px auto 20px auto;
+	border: 2px solid #000000;
+	background-color: #ffffff;
+}
+
+p {
+	text-decoration: underline;
+}
