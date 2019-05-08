@@ -3,7 +3,7 @@ header, section, footer, aside, nav{
 }
 
 body {
-	color: grey;
+	color: black;
 	background-position: center;
 	background-color: #DCDCDC;
 	font-family: 'Open Sans', sans-serif;
@@ -64,13 +64,13 @@ p {
 }
 
 a{
-	color: #000;
+	color: black;
 	text-transform: uppercase;
 	text-decoration: none;
 	padding: 6px 10px 5px 10px;
 }
 
-a:hover {
+a:hover, a.on{
 	text-decoration: underline;
 }
 
@@ -84,7 +84,7 @@ a:visited {
 }
 
 #main-nav{
-	-webkit-box-shadow: 2px 2px 2px 2px;
+	-webkit-box-shadow: 0px 0px 4px 0px;
 }
 
 
@@ -94,7 +94,7 @@ a:visited {
 	background-color: white;
 }
 
-#intro{
+#home{
 	height: 660px;
 	-webkit-box-shadow: 0px 0px 5px 0px;
 	background-color: white;
