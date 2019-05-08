@@ -71,13 +71,11 @@ a{
 }
 
 a:hover {
-	color: #cc3333
-	background-color: #ffffff;
 	text-decoration: underline;
 }
 
 a:link {
-	color:pink;
+	color:black;
 	text-decoration: none;
 }
 
@@ -85,28 +83,24 @@ a:visited {
 	color:grey;
 }
 
-a:active {
-	color: darkcyan;
-}
-
 #main-nav{
 	-webkit-box-shadow: 2px 2px 2px 2px;
 }
 
 
-.portfolio, .about-me {
+#portfolio, #about-me {
 	height: 720px;
 	-webkit-box-shadow: 0px 0px 5px 0px;
 	background-color: white;
 }
 
-.intro{
+#intro{
 	height: 660px;
 	-webkit-box-shadow: 0px 0px 5px 0px;
 	background-color: white;
 }
 
-.contact {
+#contact {
 	text-align: left;
 	background-color: white;
 	margin: 20px;
