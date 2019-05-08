@@ -1,26 +1,88 @@
-header, section, footer, aside, nav,figure, figcaption {
+header, section, footer, aside, nav{
 	display: block;
 }
 
 body {
-	color:#666666;
-	background-color: #efefef;
+	color:#000;
 	background-image: '#';
 	background-position: center;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 80%
 	letter-spacing:0.2em;
 	line-height: 1.4em;
-	margin: 20px;
+	margin: 0px auto;
 }
 
-header {
-	font-family: 'Playfair Display', serif;
+#page {
+	min-width: 720px;
+	margin: 0px auto 0px auto;
+	background-color: #ffffff
 }
 
 .wrapper {
-	width: 940px;
+	background-image: url("/Users/andrewchung/Desktop/web-projects/test-site/imgs/Stock-photo programming.jpeg")	
+}
+
+
+
+header {
+	font-family: 'Playfair Display', serif;
+	font-style: bold;
+}
+
+#title {
+	height: 80px;
+	background-color: black;
+}
+
+h1 {
+	color: white;
+	text-align: center;
+}
+
+ul { 
+	width: 600px;
+	padding: 15px;
+	margin: 0px auto 0px auto;
+	border-top: 2px solid #000;
+	border-bottom: 1px solid #000;
+	text-align: center; 
+}
+
+li {
+	display: inline;
+	margin: 3px;
+}
+
+p {
+	text-align: center;
+	width: 600px
 	margin: 20px auto 20px auto;
-	border: 2px solid #000000;
+	font-weight: normal;
+}
+
+a{
+	color: #000;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 6px 10px 5px 10px;
+}
+
+a:hover, a.on {
+	color: #cc3333
 	background-color: #ffffff;
+	text-decoration: underline;
+}
+
+a:link {
+	color:pink;
+	text-decoration: none;
+}
+
+a:visited {
+	color:black;
+}
+
+a:active {
+	color: darkcyan;
 }
