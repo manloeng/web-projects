@@ -5,15 +5,17 @@ header, section, footer, aside, nav{
 body {
 	color: grey;
 	background-position: center;
+	background-color: #DCDCDC;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 80%
 	letter-spacing:0.2em;
 	line-height: 1.4em;
 	margin: 0px auto;
+	text-align: center;
 }
 
 .wrapper {
-	background-color: white;
+	background-color: #DCDCDC;
 }
 
 
@@ -35,7 +37,7 @@ h1 {
 	width: 600px;
 	height: 50px;
 	margin: 0px auto 0px auto;
-	border-top: 2px solid black;
+	border-top: 1px solid black;
 	border-bottom: 1px solid black;
 	text-align: center; 
 }
@@ -87,11 +89,35 @@ a:active {
 	color: darkcyan;
 }
 
-.portfolio, .about-me, .contact {
+#main-nav{
+	-webkit-box-shadow: 2px 2px 2px 2px;
+}
+
+
+.portfolio, .about-me {
 	height: 720px;
+	-webkit-box-shadow: 0px 0px 5px 0px;
+	background-color: white;
 }
 
 .intro{
 	height: 660px;
-	background-color: white;	
+	-webkit-box-shadow: 0px 0px 5px 0px;
+	background-color: white;
+}
+
+.contact {
+	text-align: left;
+	background-color: white;
+	margin: 20px;
+	border: 1px solid;
+
+}
+
+#main {
+	margin: 10px;
+}
+
+form {
+	margin: 20px;
 }
