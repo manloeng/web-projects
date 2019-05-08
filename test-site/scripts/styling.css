@@ -3,8 +3,7 @@ header, section, footer, aside, nav{
 }
 
 body {
-	color:#000;
-	background-image: '#';
+	color: grey;
 	background-position: center;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 80%
@@ -13,45 +12,46 @@ body {
 	margin: 0px auto;
 }
 
-#page {
-	min-width: 720px;
-	margin: 0px auto 0px auto;
-	background-color: #ffffff
-}
-
 .wrapper {
-	background-image: url("/Users/andrewchung/Desktop/web-projects/test-site/imgs/Stock-photo programming.jpeg")	
+	background-color: white;
 }
-
 
 
 header {
 	font-family: 'Playfair Display', serif;
 	font-style: bold;
+	text-decoration: underline;	
 }
 
 #title {
-	height: 80px;
-	background-color: black;
+	margin: 20px;
 }
 
 h1 {
-	color: white;
 	text-align: center;
 }
 
-ul { 
+#main-nav { 
 	width: 600px;
-	padding: 15px;
+	height: 50px;
 	margin: 0px auto 0px auto;
-	border-top: 2px solid #000;
-	border-bottom: 1px solid #000;
+	border-top: 2px solid black;
+	border-bottom: 1px solid black;
 	text-align: center; 
+}
+
+.bottom {
+	text-align: center;
 }
 
 li {
 	display: inline;
-	margin: 3px;
+}
+
+footer {
+	clear:both;
+	color: #ffffff;
+	height: 30px;
 }
 
 p {
@@ -68,7 +68,7 @@ a{
 	padding: 6px 10px 5px 10px;
 }
 
-a:hover, a.on {
+a:hover {
 	color: #cc3333
 	background-color: #ffffff;
 	text-decoration: underline;
@@ -80,9 +80,18 @@ a:link {
 }
 
 a:visited {
-	color:black;
+	color:grey;
 }
 
 a:active {
 	color: darkcyan;
+}
+
+.portfolio, .about-me, .contact {
+	height: 720px;
+}
+
+.intro{
+	height: 660px;
+	background-color: white;	
 }
