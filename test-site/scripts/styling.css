@@ -5,7 +5,7 @@ header, section, footer, aside, nav{
 body {
 	color: black;
 	background-position: center;
-	background-color: #DCDCDC;
+	background-color: white;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 80%
 	letter-spacing:0.2em;
@@ -15,7 +15,7 @@ body {
 }
 
 .wrapper {
-	background-color: #DCDCDC;
+	background-color: white;
 }
 
 
@@ -42,7 +42,7 @@ h1 {
 	text-align: center; 
 	border-top: 1px solid black;
 	border-bottom: 1px solid black;
-	margin: 10px;
+	margin: 0px;
 }
 
 .bottom {
@@ -95,14 +95,13 @@ a:visited {
 	height: 720px;
 	background-image: url("/Users/andrewchung/Desktop/web-projects/test-site/imgs/Stock-photo programming.jpeg");
 	background-size: auto;
-	margin-bottom: 10px;
 	border-bottom: 2px solid black;
+	margin: 10px 10px 10px 0px;
 	-webkit-box-shadow: 0px 0px 5px 0px;
-	
 }
 
 #portfolio {
-	margin: 0px 0px 0px 0px;
+	margin: 10px 10px 10px 0px;
 	background-color: white;
 	-webkit-box-shadow: 0px 0px 5px 0px;
 	min-width: 600px; 
@@ -166,4 +165,8 @@ form {
 img {
   max-width: 100%;
   height: auto;
+}
+
+h2 {
+	text-align: center;
 }
