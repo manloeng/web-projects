@@ -7,7 +7,8 @@
     	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
     	<title>Andrew Chung's Portfolio</title>
     	<link rel="stylesheet" type="text/css" href="/Users/andrewchung/Desktop/web-projects/test-site/scripts/styling.css">
-    	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display" rel="stylesheet">
+		<link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-1.8.1.min.css" />
   	</head>
 	
 	<!-- Body -->
@@ -15,41 +16,33 @@
 		<div id="page">
   			<section class="wrapper">
 
-				<!-- My Logo -->
-				<header class="my-logo">
-					<span class="my-avatar"><img src="" alt="" /></span>
-					<h1 id="title">Manloeng Andrew Chung</h1>		
-					<p><em>Software Dev</em></p>
-				</header>
-
 	  			<!-- Nav -->
-	  			<nav id="main-nav">
-	    			<ul>
-	        			<li><a href="#home" id="top-link"> <span class="home-link"> Home </span></li>
-				        <li><a href="#portfolio" id="port-link"> <span class="portfolio-link"> Portfolio </span></li>
-				 
-				        <li><a href="#about-me" id="about-me-link"> <span class="about-link"> About Me </span></li>
-				        <li><a href="#contact" id="contact-me-link"> <span class="contact-link"> Contact </span></li>
-	    			</ul>
-				</nav>
-
-
-				<section class="bottom">
-
-					<!-- Social Icons -->
-					<nav id="social-nav">
-						<ul class="social-icons">
-							<li><a href="https://linkedin.com/in/andrew-chung-crane/" class="icon-linkedin" target="_blank">
-								<span class="label">Linkedin</span></a></li>
-							<li><a href="https://github.com/manloeng" class="icon-github" target="_blank">
-								<span class="label">Github</span></a></li>
-							<li><a href="https://www.facebook.com/andrew.chung.963" class="icon-facebook" target="_blank">
-								<span class="label">Facebook</span></a></li>
-							<li><a href="mailto:manloengchung@yahoo.co.uk" class="icon-envelope"><span class="label">Email</span></a></li>
-						</ul>
-					</nav>
-
-				</section>
+				  
+				<header id="navigation" class="p-navigation">
+					<div class="p-navigation__banner">
+						<div class="p-navigation__logo">
+							<a class="p-navigation__link" href="#">
+							  	<img class="p-navigation__image" src="https://assets.ubuntu.com/v1/d96d86b5-vanilla_black-orange_hex.svg" alt="" width="95">
+							</a>
+						</div>
+						<a href="#navigation" class="p-navigation__toggle--open" title="menu">Home</a>
+						<a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">Portfolio</a>
+						<a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">About Me</a>						
+						</div>
+						<nav class="p-navigation__nav" role="menubar">
+						  	<ul class="p-navigation__links" role="menu">
+								<li class="p-navigation__link is-selected" role="menuitem">
+							  	<a href="#home">Home</a>
+								</li>
+								<li class="p-navigation__link" role="menuitem">
+							  	<a href="#portfolio">Portfolio</a>
+								</li>
+								<li class="p-navigation__link" role="menuitem">
+							  	<a href="#about-me">About Me</a>
+								</li>
+						  	</ul>
+						</nav>
+					</header>
 
 			</section>
 
@@ -132,63 +125,34 @@
 			</div>
 
 
-				<!-- Contact -->
-				<section id="contact">
-					<header>
-							<h2></h2>
-					</header>
-				
-					<form action="#" method="get">
-						<fieldset>
-
-							<legend>
-								Drop me a message:
-							</legend>
-
-							<label>
-								Name:
-								<input type="text" name="name" size="30" maxlength="100">
-							</label>
-							
-							<br>
-							
-							<label>
-								Email:
-								<input type="email" name="email" size="30" maxlength="100">
-							</label>
-							<br>
-
-							<label for="message">
-								Message:
-							</label>
-
-							<br>
-							<textarea rows="4" cols="40" id="message">
-							</textarea>
-							<br>
-							<input type="submit">
-
-						</fieldset>
-
-						<p>		</p>
-						
-					</form>
-				</section>
-
-				</section>
-
-
-
 	<!-- Footer -->
 	<footer>
 		
-		<a href="#page" id="top">Return to the top</a>	
+		<nav class="p-footer__nav">
+			<ul class="p-footer__links">
+			  <li class="p-footer__item">
+				<a class="p-footer__link" href="https://linkedin.com/in/andrew-chung-crane/" target="_blank">
+					<span class="label">Linkedin</span></a>
+			  </li>
+			  <li class="p-footer__item">
+				<a class="p-footer__link" href="https://github.com/manloeng" target="_blank">
+					<span class="label">Github</span></a>
+			  </li>
+			  <li class="p-footer__item">
+				<a class="p-footer__link" href="https://www.facebook.com/andrew.chung.963" target="_blank">
+					<span class="label">Facebook</span></a>
+			  </li>
+			</ul>
+			<span>
+			  <a href="#page" id="top">Go to the top of the page</a>
+			</span>
+		  </nav>
 
 	</footer>
 
 			</div>
 	</body>
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 </html>
