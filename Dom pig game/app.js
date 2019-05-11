@@ -38,18 +38,19 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
     if (dice !== 1) {
         roundScore += dice;
         console.log (roundScore)
+
+        document.querySelector('#current-' + activePlayer).textContent = roundScore;
     }
 
     // 3. if number is one player loses round score and active player changes
     else if ( dice === 1) {
         roundScore = 0;
+        document.querySelector('#current-' + activePlayer).textContent = roundScore;
+
         // activeplayer swaps
-        if (activePlayer === 0){
-            activePlayer = 1;
-        }
-        else {
-            activePlayer = 0;
-        }
+        activePlayer === 0 ? activePlayer = 1: activePlayer = 0;
+        document.querySelector('.player-0-panel').classList.toggle('active');
+        document.querySelector('.player-1-panel').classList.toggle('active');
     }
  
     });
@@ -59,13 +60,17 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
         scores[activePlayer] += roundScore;
         roundScore = 0;
         console.log (scores)
+
+        //round score set to 0 and update score
+
+        document.querySelector('#current-' + activePlayer).textContent = 0;
+        document.getElementById("score-0").textContent = scores[0];
+        document.getElementById("score-1").textContent = scores[1];
+
         // activeplayer swaps
-        if (activePlayer === 0){
-            activePlayer = 1;
-        }
-        else {
-            activePlayer = 0;
-        }
+        activePlayer === 0 ? activePlayer = 1: activePlayer = 0;
+        document.querySelector('.player-0-panel').classList.toggle('active');
+        document.querySelector('.player-1-panel').classList.toggle('active');
     });
 
     // 5. if player scores >= 100 player wins
