@@ -3,23 +3,25 @@ body {
   background-position: center;
   background-color: white;
   font-family: "Open Sans", sans-serif;
-  font-size: 80%;
   letter-spacing: 0.2em;
   line-height: 1.4em;
   margin: 0px auto;
   text-align: center;
+  padding-top: 70px;
 }
 
 header {
   font-family: "Playfair Display", serif;
 }
 
-.jumbotron {
-  background-image: url("/Users/andrewchung/Desktop/web-projects/test-site/imgs/Stock-photo programming.jpeg");
-}
-
 #about-me-section,
 #about-me-section2,
 #about-me-section3 {
   border: 1px solid black;
+  margin: 5px;
+  box-shadow: 10px 10px 8px #888888;
+}
+
+img {
+  margin: 10px;
 }
