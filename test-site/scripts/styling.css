@@ -3,11 +3,11 @@ body {
   background-position: center;
   background-color: white;
   font-family: "Open Sans", sans-serif;
-  letter-spacing: 0.2em;
-  line-height: 1.4em;
+  letter-spacing: 0.4rem;
+  line-height: 1.5rem;
   margin: 0px auto;
   text-align: center;
-  padding-top: 70px;
+  padding-top: 7rem;
 }
 
 header {
@@ -17,10 +17,10 @@ header {
 #about-me-section,
 #about-me-section2,
 #about-me-section3 {
-  border: 1px solid black;
-  margin: 5px;
-  box-shadow: 10px 10px 8px #888888;
-  padding: 10px;
+  border: 0.1rem solid black;
+  margin: 0.5rem;
+  box-shadow: 0.1rem 0.1rem 0.08rem #888888;
+  padding: 01rem;
 }
 
 .navbar-inverse .navbar-nav > li > a {
@@ -28,7 +28,7 @@ header {
 }
 
 img {
-  margin: 10px;
+  margin: 01rem;
   border-radius: 50%;
 }
 
@@ -36,10 +36,10 @@ img {
   background-image: url("/Users/andrewchung/Desktop/web-projects/test-site/imgs/bulb.jpg");
   background-position: center;
   border-radius: 0%;
-  margin: 10px 10px 10px 0px;
-  padding: 0px;
+  box-shadow: 0.1rem 0.1rem 0.08rem;
+  padding: 01rem;
 }
 
 footer {
-  margin: 10px;
+  margin: 0.1rem;
 }
