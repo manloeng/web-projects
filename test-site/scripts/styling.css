@@ -32,6 +32,14 @@ img {
   border-radius: 50%;
 }
 
+#contactImg {
+  background-image: url("/Users/andrewchung/Desktop/web-projects/test-site/imgs/bulb.jpg");
+  background-position: center;
+  border-radius: 0%;
+  margin: 10px 10px 10px 0px;
+  padding: 0px;
+}
+
 footer {
   margin: 10px;
 }
