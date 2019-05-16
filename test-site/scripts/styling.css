@@ -23,6 +23,10 @@ header {
   padding: 10px;
 }
 
+.navbar-inverse .navbar-nav > li > a {
+  color: white;
+}
+
 img {
   margin: 10px;
   border-radius: 50%;
