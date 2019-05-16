@@ -14,6 +14,13 @@ header {
   font-family: "Playfair Display", serif;
 }
 
+.navbar-inverse .navbar-nav > li > a {
+  color: white;
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: lightblue;
+}
+
 #about-me-section,
 #about-me-section2,
 #about-me-section3 {
@@ -21,10 +28,6 @@ header {
   margin: 0.5rem;
   box-shadow: 0.1rem 0.1rem 0.08rem #888888;
   padding: 01rem;
-}
-
-.navbar-inverse .navbar-nav > li > a {
-  color: white;
 }
 
 img {
