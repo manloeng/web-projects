@@ -3,41 +3,36 @@ body {
   background-position: center;
   background-color: white;
   font-family: "Open Sans", sans-serif;
-  letter-spacing: 0.4rem;
+  letter-spacing: 0.25rem;
   line-height: 1.5rem;
   text-align: center;
+  margin-top: 6rem;
+}
+.row {
+  margin: 10px;
 }
 
 header {
   font-family: "Playfair Display", serif;
 }
 
-.navbar-nav > li > a {
-  color: white;
-}
-.navbar-nav > li > a:hover {
-  color: lightblue;
-}
-
 #about-me-section,
 #about-me-section2,
 #about-me-section3 {
   border: 0.1rem solid black;
-  margin: 0.5rem;
-  box-shadow: 0.1rem 0.1rem 0.08rem #888888;
-  padding: 01rem;
+  box-shadow: 0.1rem 0.1rem #888888;
+  justify-content: center;
 }
 
 img {
-  margin: 01rem;
   border-radius: 50%;
 }
 
 #contactImg {
-  background-position: center;
   border-radius: 0%;
 }
 
-footer {
+.fa {
+  color: white;
   margin: 0.1rem;
 }
