@@ -1,167 +1,279 @@
 <!DOCTYPE html>
 
 <html>
+  <!-- Head -->
+  <head>
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Andrew Chung's Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="scripts/styling.css" />
+  </head>
 
-	<!-- Head -->
-	<head>
-  	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-  	<title>Andrew Chung's Portfolio</title>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display" rel="stylesheet">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="scripts/styling.css">
-		
-	</head>
-	
-	<!-- Body -->
-  	<body>
+  <!-- Body -->
+  <body>
+    <!-- Nav -->
+    <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark p-10">
+      <a class="navbar-brand" href="#">Manloeng Andrew Chung</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-	  			<!-- Nav -->
-				  <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark p-10">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              About Me
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a href="#" class="dropdown-item">My Portfolio</a>
+              <a href="#" class="dropdown-item">My CV</a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">Extras</a>
+            </div>
+          </li>
+        </ul>
+      </div>
 
-					  <a class="navbar-brand" href="#">Manloeng Andrew Chung</a>
-								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-										<span class="navbar-toggler-icon"></span>
-								</button>
-				  
-					  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-							<ul class="navbar-nav mr-auto">
-								<li class="nav-item dropdown">
-										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												About Me
-										</a>
-	
-									<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-										<a href="#" class="dropdown-item">My Portfolio</a>
-										<a href="#" class="dropdown-item">My CV</a>
-										<div class="dropdown-divider"></div>
-										<a href="#" class="dropdown-item">Extras</a>
-									</div>
-								</li>
-							</ul>
-					  </div>
+      <div class="nav navbar d-none d-md-block">
+        <a href="https://www.facebook.com/andrew.chung.963"
+          ><i class="fa fa-facebook fa-lg"></i
+        ></a>
+        <a href="https://linkedin.com/in/andrew-chung-crane/"
+          ><i class="fa fa-linkedin fa-lg"></i
+        ></a>
+        <a href="https://github.com/manloeng"
+          ><i class="fa fa-github fa-lg"></i
+        ></a>
+      </div>
+    </nav>
 
-							<div class="nav navbar d-none d-md-block">
-								<a href="https://www.facebook.com/andrew.chung.963"><i class="fa fa-facebook fa-lg"></i></a>
-								<a href="https://linkedin.com/in/andrew-chung-crane/"><i class="fa fa-linkedin fa-lg"></i></a>
-								<a href="https://github.com/manloeng"><i class="fa fa-github fa-lg"></i></a>
-							</div>
-					  </div>
-				  </nav>
+    <!-- Main -->
 
-			<!-- Main -->
+    <!-- Intro -->
+    <section class="container-fluid">
+      <div class="row align-items-center">
+        <span class="col-md-6 text-center">
+          <header>
+            <h2 class="home">Home</h2>
+          </header>
 
-				<!-- Intro -->
-				<section class="container-fluid">
-					<div class="row align-items-center">
-								<span class="col-md-6 text-center">
-									<header>
-										<h2 class="home">Home</h2>
-									</header>	
-									
-									<p id="homePara">	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.	</p>
+          <p id="homePara">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+            commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+            Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
+            aliquet nec, vulputate eget, arcu.
+          </p>
+        </span>
+        <span class="col-md-6">
+          <img
+            src="/Users/andrewchung/Desktop/web-projects/test-site/imgs/Stock-photo programming.jpeg"
+            width="100%"
+            )
+          />
+        </span>
+      </div>
+    </section>
 
-								</span>
-								<span class="col-md-6">
-										<img src="/Users/andrewchung/Desktop/web-projects/test-site/imgs/Stock-photo programming.jpeg" width= "100%")>
-								</span> 
-					</div>
-				</section>
+    <!-- Portfolio -->
+    <section class="container-fluid">
+      <div class="row align-items-center">
+        <span class="col-md-6 order-2 order-md-1">
+          <img
+            src="/Users/andrewchung/Desktop/web-projects/test-site/imgs/bulb.jpg"
+            width="100%"
+          />
+        </span>
+        <span class="col-md-6 text-center order-1 order-md-2">
+          <header>
+            <h2>Portfolio</h2>
+          </header>
 
-				<!-- Portfolio -->
-				<section class="container-fluid">
-						<div class="row align-items-center">
-								<span class="col-md-6 order-2 order-md-1">
-									<img src="/Users/andrewchung/Desktop/web-projects/test-site/imgs/bulb.jpg" width="100%">
-								</span> 
-								<span class="col-md-6 text-center order-1 order-md-2">
-									<header>
-										<h2>Portfolio</h2>
-									</header>
-									
-									<p id="portfolioPara">	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.	</p>
-									
-								</span>
-						</div>	
-					</section>
+          <p id="portfolioPara">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+            commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+            Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
+            aliquet nec, vulputate eget, arcu.
+          </p>
+        </span>
+      </div>
+    </section>
 
-					<!-- About me -->
-					<section class="container-fluid">
-							<div class="row">
-								<div class="col-xl-4 col-md-4" >
-									<div class="col-8 mx-auto col-md-12 mb-3 mb-md-0" id="about-me-section">
-										<span >
-											<header>
-												<h2></h2>
-											</header>
-											<img id="aboutImg1" src="/Users/andrewchung/Desktop/web-projects/test-site/imgs/bulb.jpg" width="49%">
-		
-											<p id="aboutPara1">	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.	</p>
-										<button class="btn btn-outline-primary" type="submit">Portfolio</button>
-									</span>
-									</div>
-								</div>
-		
-								<div class="col-xl-4 col-md-4">
-										<div class="col-8 mx-auto col-md-12 mb-3 mb-md-0" id="about-me-section2">
-										<span>
-												<header>
-													<h2></h2>
-												</header>
-			
-												<img id="aboutImg2" src="/Users/andrewchung/Desktop/web-projects/test-site/imgs/bulb.jpg" width="49%">
-			
-												<p id="aboutPara2">	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.	</p>
-											
-												<button class="btn btn-outline-primary" type="submit">CV</button>
-									
-										</span>
-										</div>
-									</div>
-			
-									<div class="col-xl-4 col-md-4">
-										<div class="col-8 mx-auto col-md-12 mb-3 mb-md-0" id="about-me-section3">
-											<span>
-													<header>
-														<h2></h2>
-													</header>
-				
-													<img id="aboutImg3" src="/Users/andrewchung/Desktop/web-projects/test-site/imgs/bulb.jpg" width="49%">
-													
-													<p id="aboutPara3">	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.	</p>
-					
-												<button class="btn btn-outline-primary" type="submit" disabled>Extras</button>
-												
-											</span>
-										</div>
-									</div>
-							</div>
-						
-							<section class="container-fluid px-0">
-									<div class="row ml-0 align-items-center">
-											<span class="col-md-6 px-0 d-none d-md-block">
-													<img id='contactImg' class="img-fluid" src="/Users/andrewchung/Desktop/web-projects/test-site/imgs/bulb.jpg" >
-												</span>
+    <!-- About me -->
+    <section class="container-fluid">
+      <div class="row">
+        <div class="col-xl-4 col-md-4">
+          <div
+            class="col-8 mx-auto col-md-12 mb-3 mb-md-0"
+            id="about-me-section"
+          >
+            <span>
+              <header>
+                <h2></h2>
+              </header>
+              <img
+                id="aboutImg1"
+                src="/Users/andrewchung/Desktop/web-projects/test-site/imgs/bulb.jpg"
+                width="49%"
+              />
 
-										<span class="col-md-6 text-center">
-											<header>
-												<h2>Contact</h2>
-											</header>
-											
-											<p>	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.	</p>
-											
-									</span>
-								</div>
-							</section>
-					</section>
-	
-</body>
+              <p id="aboutPara1">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                penatibus et magnis dis parturient montes, nascetur ridiculus
+                mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
+                quis, sem. Nulla consequat massa quis enim. Donec pede justo,
+                fringilla vel, aliquet nec, vulputate eget, arcu.
+              </p>
+              <button class="btn btn-outline-primary" type="submit">
+                Portfolio
+              </button>
+            </span>
+          </div>
+        </div>
 
+        <div class="col-xl-4 col-md-4">
+          <div
+            class="col-8 mx-auto col-md-12 mb-3 mb-md-0"
+            id="about-me-section2"
+          >
+            <span>
+              <header>
+                <h2></h2>
+              </header>
 
+              <img
+                id="aboutImg2"
+                src="/Users/andrewchung/Desktop/web-projects/test-site/imgs/bulb.jpg"
+                width="49%"
+              />
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script type="text/javascript" src="scripts/script.js"></script>
+              <p id="aboutPara2">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                penatibus et magnis dis parturient montes, nascetur ridiculus
+                mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
+                quis, sem. Nulla consequat massa quis enim. Donec pede justo,
+                fringilla vel, aliquet nec, vulputate eget, arcu.
+              </p>
 
+              <button class="btn btn-outline-primary" type="submit">CV</button>
+            </span>
+          </div>
+        </div>
+
+        <div class="col-xl-4 col-md-4">
+          <div
+            class="col-8 mx-auto col-md-12 mb-3 mb-md-0"
+            id="about-me-section3"
+          >
+            <span>
+              <header>
+                <h2></h2>
+              </header>
+
+              <img
+                id="aboutImg3"
+                src="/Users/andrewchung/Desktop/web-projects/test-site/imgs/bulb.jpg"
+                width="49%"
+              />
+
+              <p id="aboutPara3">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                penatibus et magnis dis parturient montes, nascetur ridiculus
+                mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
+                quis, sem. Nulla consequat massa quis enim. Donec pede justo,
+                fringilla vel, aliquet nec, vulputate eget, arcu.
+              </p>
+
+              <button class="btn btn-outline-primary" type="submit" disabled>
+                Extras
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <section class="container-fluid px-0">
+        <div class="row ml-0 align-items-center">
+          <span class="col-md-6 px-0 d-none d-md-block">
+            <img
+              id="contactImg"
+              class="img-fluid"
+              src="/Users/andrewchung/Desktop/web-projects/test-site/imgs/bulb.jpg"
+            />
+          </span>
+
+          <span class="col-md-6 text-center">
+            <header>
+              <h2>Contact</h2>
+            </header>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+              Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+              sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
+              vel, aliquet nec, vulputate eget, arcu.
+            </p>
+          </span>
+        </div>
+      </section>
+    </section>
+  </body>
+
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+  ></script>
+  <script type="text/javascript" src="scripts/script.js"></script>
 </html>
