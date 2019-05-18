@@ -40,3 +40,7 @@ img {
 .btn-outline-primary {
   margin: 0.25rem;
 }
+
+.fa:hover {
+  color: lightblue;
+}
