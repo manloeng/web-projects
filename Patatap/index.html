@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<!-- Load the Paper.js library -->
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.1/paper-full.js"></script>
+			<!-- Define inlined PaperScript associate it with myCanvas -->
+			<script type="text/paperscript" canvas="myCanvas">
+
+
+
+				for (var i = 0; i <= 1000; i += 200) {
+
+					for (var j = 0; j <= 500; j += 100) {
+						var coordX = i;
+						var coordY = j
+						var shape = new Shape.Circle(new Point(coordX, coordY), 30);
+						shape.fillColor = 'blue';
+					}
+				}
+
+
+			</script>
+			<link rel="stylesheet" type="text/css" href="./index.css">
+		</head>
+		<body>
+			<canvas id="myCanvas" resize></canvas>
+		</body>
+	</html>
