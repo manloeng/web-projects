@@ -1,29 +1,53 @@
 <!DOCTYPE html>
 	<html>
 		<head>
-			<!-- Load the Paper.js library -->
 			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.1/paper-full.js"></script>
-			<!-- Define inlined PaperScript associate it with myCanvas -->
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.js"></script>
 			<script type="text/paperscript" canvas="myCanvas">
+				
+				var keyData = {
+					a:{
+						color: "purple",
+						sound: new Howl({
+							src: ['sounds/bubbles.mp3']
+						})
+					},
+					b:{
+						color: "yellow",
+						sound: new Howl({
+							src: ['sounds/clay.mp3']
+						})
+					},
+					c:{
+						color: "green",
+						sound: new Howl({
+							src: ['sounds/confetti.mp3']
+						})
+					}
+				}
 
 				var circles = [];
 				
 				function onKeyDown(event) {
-					var maxPoint = new Point(view.size.width, view.size.height);
-					var randomPoint = Point.random();
-					var point = maxPoint * Point.random();
-					var newCircle = new Path.Circle(point, 100)
-					newCircle.fillColor = 'blue'
-					
-					circles.push (newCircle);
+					if (keyData[event.key]) {
+						var maxPoint = new Point(view.size.width, view.size.height);
+						var randomPoint = Point.random();
+						var point = maxPoint * Point.random();
+						var newCircle = new Path.Circle(point, 100)
+						newCircle.fillColor = keyData[event.key].color
+						keyData[event.key].sound.play()
+
+						circles.push (newCircle);
+					}
 				}
 
 				function onFrame(event){
 					for (var i = 0; i < circles.length; i++) {
 						circles[i].fillColor.hue += 1
 						circles[i].scale(0.99)
+						}
 					}
-				}
+				
 			</script>
 			<link rel="stylesheet" type="text/css" href="./index.css">
 		</head>
