@@ -7,6 +7,7 @@ import Header from './header';
 import Home from '../routes/home';
 import Profile from '../routes/profile';
 import Users from '../routes/Users';
+import Topics from '../routes/Topics';
 
 export default class App extends Component {
 	state = {
@@ -47,16 +48,18 @@ export default class App extends Component {
 	render() {
 		const { data } = this.state;
 		return (
-			<div id="app">
-				{console.log(data)}
-				<Header />
-				<Router onChange={this.handleRoute}>
-					<Home path="/" data={data} />
-					<Users path="/users/" data={data} />
-					<Profile path="/profile/" user="me" />
-					<Profile path="/profile/:user" />
-				</Router>
-			</div>
+			data && (
+				<div id="app">
+					<Header />
+					<Router onChange={this.handleRoute}>
+						<Home path="/" data={data} />
+						<Users path="/users/" data={data} />
+						<Topics path="/topics/" data={data} />
+						<Profile path="/profile/" user="me" />
+						<Profile path="/profile/:user" />
+					</Router>
+				</div>
+			)
 		);
 	}
 }

@@ -1,17 +1,18 @@
+import { h } from 'preact';
+
 const Users = ({ data }) => (
 	<div>
 		<h1>Welcome To our selection of Users</h1>
 		<p>This is the Users page.</p>
 
-		{data &&
-			data.users.map((user) => (
-				<div>
-					<h2>{user.username}</h2>
-					<p>{user.name}</p>
-					{/* bad avatar url */}
-					<img src={`${user.avatar_url}`} />
-				</div>
-			))}
+		{data.users.map((user) => (
+			<div>
+				<h2>{user.username}</h2>
+				<p>{user.name}</p>
+				{/* bad avatar url */}
+				<img src={`${user.avatar_url}`} />
+			</div>
+		))}
 	</div>
 );
 
