@@ -2,6 +2,7 @@ import { h } from 'preact';
 
 const Users = ({ data }) => (
 	<div>
+		{console.log(data, '<-----')}
 		<h1>Welcome To our selection of Users</h1>
 		<p>This is the Users page.</p>
 

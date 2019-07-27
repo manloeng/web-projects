@@ -12,38 +12,42 @@ import Topics from '../routes/Topics';
 export default class App extends Component {
 	state = {
 		currentRoute: '/',
-		prevRoute: null,
 		data: null
 	};
 
 	handleRoute = (e) => {
-		const { currentRoute, prevRoute } = this.state;
-		this.setState({ currentRoute: e.url });
-		if (!prevRoute) {
-			this.setState({ prevRoute: currentRoute });
+		const reg = /\w+/g;
+		if (e.url === '/') {
+			this.setState({ currentRoute: '/' }, () => console.log(this.state));
 		}
-		if (currentRoute !== prevRoute) {
-			this.setState({ currentRoute: e.url });
+		if (e.url !== '/') {
+			const matchedURL = e.url.match(reg)[0];
+			// need to use the current state rather than this.state
+			if (!this.state[matchedURL]) {
+				fetch(`http://localhost:9090/api${e.url}`).then((response) => response.json()).then((responseJson) => {
+					this.setState({ currentRoute: e.url, data: responseJson }, () => console.log(this.state));
+				});
+				if (this.state[matchedURL]) {
+					this.setState({ currentRoute: e.url });
+				}
+			}
 		}
 	};
 
-	componentDidMount() {
-		const { currentRoute } = this.state;
-		if (currentRoute === '/') {
-			fetch(`http://localhost:9090/api`).then((response) => response.json()).then((responseJson) => {
-				this.setState({ data: responseJson });
-			});
-		}
+	componentWillMount() {
+		fetch(`http://localhost:9090/api`).then((response) => response.json()).then((responseJson) => {
+			this.setState({ data: responseJson }, () => console.log('here'));
+		});
 	}
 
-	componentDidUpdate() {
-		const { currentRoute, prevRoute } = this.state;
-		if (currentRoute !== prevRoute) {
-			fetch(`http://localhost:9090/api${currentRoute}`).then((response) => response.json()).then((responseJson) => {
-				this.setState({ data: responseJson, prevRoute: currentRoute });
-			});
-		}
-	}
+	// componentDidUpdate() {
+	// 	const { currentRoute, prevRoute } = this.state;
+	// 	if (currentRoute !== prevRoute) {
+	// 		fetch(`http://localhost:9090/api${currentRoute}`).then((response) => response.json()).then((responseJson) => {
+	// 			this.setState({ data: responseJson, prevRoute: currentRoute });
+	// 		});
+	// 	}
+	// }
 
 	render() {
 		const { data } = this.state;
@@ -54,7 +58,7 @@ export default class App extends Component {
 					<Router onChange={this.handleRoute}>
 						<Home path="/" data={data} />
 						<Users path="/users/" data={data} />
-						<Topics path="/topics/" data={data} />
+						{/* {topics && <Topics path="/topics/" topics={topics} />} */}
 						<Profile path="/profile/" user="me" />
 						<Profile path="/profile/:user" />
 					</Router>
