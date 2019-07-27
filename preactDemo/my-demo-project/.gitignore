@@ -1,0 +1,7 @@
+node_modules
+/build
+/*.log
+*.lock
+be-nc-news
+
+package-lock.json
