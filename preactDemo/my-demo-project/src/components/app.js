@@ -16,28 +16,24 @@ export default class App extends Component {
 	};
 
 	handleRoute = (e) => {
-		const reg = /\w+/g;
-		if (e.url === '/') {
-			this.setState({ currentRoute: '/' }, () => console.log(this.state));
-		}
-		if (e.url !== '/') {
-			const matchedURL = e.url.match(reg)[0];
-			// need to use the current state rather than this.state
-			if (!this.state[matchedURL]) {
-				fetch(`http://localhost:9090/api${e.url}`).then((response) => response.json()).then((responseJson) => {
-					this.setState({ currentRoute: e.url, data: responseJson }, () => console.log(this.state));
-				});
-				if (this.state[matchedURL]) {
-					this.setState({ currentRoute: e.url });
-				}
-			}
-		}
+		const { currentRoute } = this.state;
+		this.setState({ currentRoute: e.url }, () => console.log(this.state, '<-----'));
 	};
 
-	componentWillMount() {
-		fetch(`http://localhost:9090/api`).then((response) => response.json()).then((responseJson) => {
-			this.setState({ data: responseJson }, () => console.log('here'));
-		});
+	componentDidMount() {
+		const { currentRoute } = this.state;
+		console.log(currentRoute, '<====');
+		fetch(`http://localhost:9090/api${currentRoute}`)
+			.then((response) => {
+				console.log(response);
+				return response.json();
+			})
+			.then((responseJson) => {
+				console.log(responseJson, 'json');
+				this.setState({ data: responseJson }, () => {
+					console.log(this.state);
+				});
+			});
 	}
 
 	// componentDidUpdate() {
@@ -52,18 +48,16 @@ export default class App extends Component {
 	render() {
 		const { data } = this.state;
 		return (
-			data && (
-				<div id="app">
-					<Header />
-					<Router onChange={this.handleRoute}>
-						<Home path="/" data={data} />
-						<Users path="/users/" data={data} />
-						{/* {topics && <Topics path="/topics/" topics={topics} />} */}
-						<Profile path="/profile/" user="me" />
-						<Profile path="/profile/:user" />
-					</Router>
-				</div>
-			)
+			<div id="app">
+				<Header />
+				<Router onChange={this.handleRoute}>
+					<Home path="/" data={data} />
+					<Users path="/users/" data={data} />
+					{/* {topics && <Topics path="/topics/" topics={topics} />} */}
+					<Profile path="/profile/" user="me" />
+					<Profile path="/profile/:user" />
+				</Router>
+			</div>
 		);
 	}
 }
