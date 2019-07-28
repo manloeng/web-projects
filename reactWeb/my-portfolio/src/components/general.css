@@ -1,0 +1,46 @@
+/* body {
+	color: black;
+	background-position: center;
+	background-color: white;
+	font-family: "Open Sans", sans-serif;
+	letter-spacing: 0.25rem;
+	line-height: 1.5rem;
+	text-align: center;
+	margin-top: 6rem;
+}
+.row {
+	margin: 10px;
+}
+
+header {
+	font-family: "Playfair Display", serif;
+}
+
+#about-me-section,
+#about-me-section2,
+#about-me-section3 {
+	border: 0.1rem solid #888888;
+	box-shadow: 0.1rem 0.1rem #888888;
+	padding: 0.1rem;
+	justify-content: center;
+}
+
+img {
+	border-radius: 50%;
+}
+
+#contactImg {
+	border-radius: 0%;
+}
+
+.fa {
+	color: white;
+	margin: 0.1rem;
+}
+.btn-outline-primary {
+	margin: 0.25rem;
+}
+
+.fa:hover {
+	color: lightblue;
+} */

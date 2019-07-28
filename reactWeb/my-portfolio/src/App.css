@@ -1,0 +1,14 @@
+.App {
+	text-align: center;
+}
+
+body {
+	color: black;
+	background-position: center;
+	background-color: white;
+	font-family: "Open Sans", sans-serif;
+	letter-spacing: 0.25rem;
+	line-height: 1.5rem;
+	text-align: center;
+	margin-top: 6rem;
+}
