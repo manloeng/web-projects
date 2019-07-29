@@ -16,31 +16,20 @@ export default class App extends Component {
 	};
 
 	handleRoute = (e) => {
-		const { currentRoute } = this.state;
-		this.setState({ currentRoute: e.url }, () => console.log(this.state, '<-----'));
+		this.setState({ currentRoute: e.url });
 	};
 
-	componentDidMount() {
-		const { currentRoute } = this.state;
-		console.log(currentRoute, '<====');
-		fetch(`http://localhost:9090/api${currentRoute}`)
-			.then((response) => {
-				console.log(response);
-				return response.json();
-			})
-			.then((responseJson) => {
-				console.log(responseJson, 'json');
-				this.setState({ data: responseJson }, () => {
-					console.log(this.state);
-				});
-			});
-	}
+	// componentDidMount() {
+	// 	fetch(`http://localhost:9090/api`).then((response) => response.json()).then((responseJson) => {
+	// 		this.setState({ data: responseJson });
+	// 	});
+	// }
 
-	// componentDidUpdate() {
-	// 	const { currentRoute, prevRoute } = this.state;
-	// 	if (currentRoute !== prevRoute) {
+	// fetchData() {
+	// 	const { currentRoute } = this.state;
+	// 	if (currentRoute) {
 	// 		fetch(`http://localhost:9090/api${currentRoute}`).then((response) => response.json()).then((responseJson) => {
-	// 			this.setState({ data: responseJson, prevRoute: currentRoute });
+	// 			this.setState({ data: responseJson }, console.log(this.state));
 	// 		});
 	// 	}
 	// }
@@ -52,7 +41,7 @@ export default class App extends Component {
 				<Header />
 				<Router onChange={this.handleRoute}>
 					<Home path="/" data={data} />
-					<Users path="/users/" data={data} />
+					<Users path="/users/" />
 					{/* {topics && <Topics path="/topics/" topics={topics} />} */}
 					<Profile path="/profile/" user="me" />
 					<Profile path="/profile/:user" />
