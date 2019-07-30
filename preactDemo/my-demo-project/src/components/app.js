@@ -12,6 +12,7 @@ import Topics from '../routes/Topics';
 export default class App extends Component {
 	state = {
 		currentRoute: '/',
+		initialData: null,
 		data: null
 	};
 
@@ -19,30 +20,30 @@ export default class App extends Component {
 		this.setState({ currentRoute: e.url });
 	};
 
-	// componentDidMount() {
-	// 	fetch(`http://localhost:9090/api`).then((response) => response.json()).then((responseJson) => {
-	// 		this.setState({ data: responseJson });
-	// 	});
-	// }
+	componentDidMount() {
+		fetch(`http://localhost:9090/api`).then((response) => response.json()).then((responseJson) => {
+			this.setState({ data: responseJson, initialData: responseJson });
+		});
+	}
 
-	// fetchData() {
-	// 	const { currentRoute } = this.state;
-	// 	if (currentRoute) {
-	// 		fetch(`http://localhost:9090/api${currentRoute}`).then((response) => response.json()).then((responseJson) => {
-	// 			this.setState({ data: responseJson }, console.log(this.state));
-	// 		});
-	// 	}
-	// }
+	componentDidUpdate(prevProps, prevState) {
+		const { currentRoute } = this.state;
+		if (currentRoute !== prevState.currentRoute) {
+			fetch(`http://localhost:9090/api${currentRoute}`).then((response) => response.json()).then((responseJson) => {
+				this.setState({ data: responseJson });
+			});
+		}
+	}
 
 	render() {
-		const { data } = this.state;
+		const { data, initialData } = this.state;
 		return (
 			<div id="app">
 				<Header />
 				<Router onChange={this.handleRoute}>
-					<Home path="/" data={data} />
-					<Users path="/users/" />
-					{/* {topics && <Topics path="/topics/" topics={topics} />} */}
+					<Home path="/" initialData={initialData} />
+					<Users path="/users/" data={data} />
+					<Topics path="/topics/" data={data} />
 					<Profile path="/profile/" user="me" />
 					<Profile path="/profile/:user" />
 				</Router>
