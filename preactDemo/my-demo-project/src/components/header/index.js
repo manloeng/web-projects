@@ -15,11 +15,11 @@ const Header = () => (
 			<Link activeClassName={style.active} href="/topics">
 				Topics
 			</Link>
-			<Link activeClassName={style.active} href="/profile">
-				Me
+			<Link activeClassName={style.active} href="/comments">
+				Comments
 			</Link>
-			<Link activeClassName={style.active} href="/profile/john">
-				John
+			<Link activeClassName={style.active} href="/articles">
+				Articles
 			</Link>
 		</nav>
 	</header>
