@@ -54,4 +54,8 @@ button {
 	body {
 		background-size: 600px 400px;
 	}
+	.hero-image {
+		top: 20%;
+		left: 25%;
+	}
 }
