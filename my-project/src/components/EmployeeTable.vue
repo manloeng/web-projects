@@ -4,6 +4,7 @@
       <!-- ...thead... -->
       <tbody>
         <tr v-for="employee in employees" :key="employee.id">
+          <p>Test Table</p>
           <td>{{ employee.name }}</td>
           <td>{{ employee.email }}</td>
         </tr>
