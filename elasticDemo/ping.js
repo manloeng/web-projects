@@ -1,6 +1,6 @@
-const esClient = require('./client');
+const client = require('./client');
 
-esClient.ping({
+client.ping({
 // ping usually has a 3000ms timeout
     requestTimeout: 1000
 }, function (error) {
