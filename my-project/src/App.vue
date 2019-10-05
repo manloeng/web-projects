@@ -7,6 +7,7 @@
         <!-- <router-link to='/login'>Login</router-link> -->
     </nav>
     <router-view />
+     <font-awesome-icon icon="user-secret" />
   </div>
 </template>
 
