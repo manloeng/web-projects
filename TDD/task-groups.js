@@ -1,11 +1,11 @@
-module.exports = {
-  Todo: [
+module.exports = [
     {
       id: 1,
       task: 'Tasks',
       length: '2 weeks',
       startDate: '01/03/2019',
       colour: 'blue',
+      status: "Todo"
     },
     {
       id: 2,
@@ -13,6 +13,7 @@ module.exports = {
       length: '1.5 months',
       startDate: '16/03/2019',
       colour: 'red',
+      status: "Todo"
     },
     {
       id: 3,
@@ -20,8 +21,6 @@ module.exports = {
       length: '1 month',
       startDate: '28/03/2019',
       colour: 'orange',
+      status: "Complete"
     }
-  ],
-  'In Progress': [],
-  Complete: [],
-};
+  ]
