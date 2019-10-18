@@ -1,41 +1,162 @@
-const data = require('./task-groups')
+const data = require("./task-groups");
 
-const {
-  TaskBoardDragTask,
-} = require('./TaskBoardArrManipulation.js');
+const { taskBoardArrManipulation } = require("./taskBoardArrManipulation.js");
 
-describe('TaskBoardDragTask()', () => {
-  it('returns an empty Object when there are no tasks to drag', () => {
-    const expected = TaskBoardDragTask();
-    expect(expected).toEqual({});
+describe("taskBoardArrManipulation()", () => {
+  it("returns an empty Array when there are no tasks to drag", () => {
+    const initial = taskBoardArrManipulation();
+    expect(initial).toEqual([]);
   });
-  it('returns the original Object containing keys and arrays when no task is selected', () => {
-    const input = data
-    const expected = TaskBoardDragTask(input);
-    expect(expected).toEqual(data);
+  it("returns an object with the task status the when the task is dropped in the same place", () => {
+    const input = [
+      {
+        id: 1,
+        task: "Tasks",
+        length: "2 weeks",
+        startDate: "01/03/2019",
+        colour: "blue",
+        status: "Todo"
+      },
+      {
+        id: 2,
+        task: "Chat",
+        length: "1.5 months",
+        startDate: "16/03/2019",
+        colour: "red",
+        status: "Todo"
+      }
+    ];
+    const selected = 1;
+    const dropStatus = "Todo";
+    const arrDropPos = 0;
+    const initial = taskBoardArrManipulation(
+      input,
+      selected,
+      dropStatus,
+      arrDropPos
+    );
+    const expected = {
+      Todo: [
+        {
+          id: 1,
+          task: "Tasks",
+          length: "2 weeks",
+          startDate: "01/03/2019",
+          colour: "blue",
+          status: "Todo"
+        },
+        {
+          id: 2,
+          task: "Chat",
+          length: "1.5 months",
+          startDate: "16/03/2019",
+          colour: "red",
+          status: "Todo"
+        }
+      ]
+    };
+    expect(initial).toEqual(expected);
   });
-  it('returns the selected task when a task is selected', () => {
-    const input = data.Todo
-    const selected = 1
-    const expected = TaskBoardDragTask(input, selected);
-    expect(expected).toEqual(  {
-      id: 1,
-      task: 'Tasks',
-      length: '2 weeks',
-      startDate: '01/03/2019',
-      colour: 'blue',
-    });
+  it("returns the the position of the selected tasks when a task is moved down the list by one", () => {
+    const input = [
+      {
+        id: 1,
+        task: "Tasks",
+        length: "2 weeks",
+        startDate: "01/03/2019",
+        colour: "blue",
+        status: "Todo"
+      },
+      {
+        id: 2,
+        task: "Chat",
+        length: "1.5 months",
+        startDate: "16/03/2019",
+        colour: "red",
+        status: "Todo"
+      }
+    ];
+    const selected = 1;
+    const dropStatus = "Todo";
+    const arrDropPos = 1;
+    const initial = taskBoardArrManipulation(
+      input,
+      selected,
+      dropStatus,
+      arrDropPos
+    );
+    const expected = {
+      Todo: [
+        {
+          id: 2,
+          task: "Chat",
+          length: "1.5 months",
+          startDate: "16/03/2019",
+          colour: "red",
+          status: "Todo"
+        },
+        {
+          id: 1,
+          task: "Tasks",
+          length: "2 weeks",
+          startDate: "01/03/2019",
+          colour: "blue",
+          status: "Todo"
+        }
+      ]
+    };
+    expect(initial).toEqual(expected);
   });
-  it('returns the selected task in an nested object when a task is selected', () => {
-    const input = data
-    const selected = 1
-    const expected = TaskBoardDragTask(input, selected);
-    expect(expected).toEqual(  {
-      id: 1,
-      task: 'Tasks',
-      length: '2 weeks',
-      startDate: '01/03/2019',
-      colour: 'blue',
-    });
+  it.only("returns the the position of the selected tasks to the end of the list when a task is moved to complete", () => {
+    const input = [
+      {
+        id: 1,
+        task: "Tasks",
+        length: "2 weeks",
+        startDate: "01/03/2019",
+        colour: "blue",
+        status: "Todo"
+      },
+      {
+        id: 2,
+        task: "Chat",
+        length: "1.5 months",
+        startDate: "16/03/2019",
+        colour: "red",
+        status: "Todo"
+      }
+    ];
+    const selected = 1;
+    const dropStatus = "Progress";
+    const arrDropPos = 0;
+    const initial = taskBoardArrManipulation(
+      input,
+      selected,
+      dropStatus,
+      arrDropPos
+    );
+    const expected = {
+      Todo: [
+        {
+          id: 2,
+          task: "Chat",
+          length: "1.5 months",
+          startDate: "16/03/2019",
+          colour: "red",
+          status: "Todo"
+        }
+      ],
+      Progress: [
+        {
+          id: 1,
+          task: "Tasks",
+          length: "2 weeks",
+          startDate: "01/03/2019",
+          colour: "blue",
+          status: "Progress"
+        }
+      ]
+    };
+    expect(initial).toEqual(expected);
   });
 });
