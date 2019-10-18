@@ -107,7 +107,7 @@ describe("taskBoardArrManipulation()", () => {
     };
     expect(initial).toEqual(expected);
   });
-  it.only("returns the the position of the selected tasks to the end of the list when a task is moved to complete", () => {
+  it("returns the the position of the selected tasks to the end of the list when a task is moved to complete", () => {
     const input = [
       {
         id: 1,

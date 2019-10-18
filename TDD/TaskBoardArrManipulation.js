@@ -14,26 +14,33 @@ const taskBoardArrManipulation = (data, selected, newStatus, drop) => {
   })
 
   // update selected item - use selectedTask[0]
+  let selectedTaskInitialStatus = null
   const selectedTask = data.filter(task => {
     if (task.id === selected) {
+      selectedTaskInitialStatus = task.status
       task.status = newStatus;
       return task;
     }
   });
+  if (!(selectedTask[0].status in newObj)) newObj[selectedTask[0].status] = []
 
   const selectedTaskStatus = selectedTask[0].status
-  const taskIndex = newObj[selectedTaskStatus].findIndex(task => {
+  // console.log(selectedTaskStatus)
+  const taskIndex = newObj[selectedTaskInitialStatus].findIndex(task => {
     if (task.id === selected) {
       return task;
     }
   });
 
-  const TaskGroup = newObj[selectedTaskStatus]
+  const taskGroup = newObj[selectedTaskInitialStatus]
   // deletes item
-  TaskGroup.splice(taskIndex, 1)
-  // adds item
-  TaskGroup.splice(drop, 0, selectedTask[0]);
-  console.log(newObj)
+  taskGroup.splice(taskIndex, 1)
+
+
+  const newTaskGroup = newObj[selectedTaskStatus]
+  // adds item into new task group
+  newTaskGroup.splice(drop, 0, selectedTask[0]);
+
   return newObj;
 };
 
