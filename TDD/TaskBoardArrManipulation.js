@@ -1,47 +1,39 @@
 const taskBoardArrManipulation = (data, selected, newStatus, drop) => {
-  if (!data) return [];
+  if (!data) return {};
   if (!selected) return data;
 
-  const newObj = {}
-  // creates a new object with the task keys
-  data.forEach(task => {
-    if (!(task.status in newObj)) newObj[task.status] = []
-  })
+  const dataEntry = Object.entries(data);
 
-  // populate data into the correct keys
-  data.forEach(task => {
-    if (task.status in newObj) newObj[task.status].push(task) 
-  })
-
-  // update selected item - use selectedTask[0]
-  let selectedTaskInitialStatus = null
-  const selectedTask = data.filter(task => {
-    if (task.id === selected) {
-      selectedTaskInitialStatus = task.status
-      task.status = newStatus;
-      return task;
+  // gets the selected task in arr
+  const selectedTaskArr = dataEntry.map(group => {
+    const filterGroup = group[1].filter(task => {
+      if (task.id === selected) {
+        return task;
+      }
+    });
+    if (filterGroup.length) {
+      return filterGroup;
     }
   });
-  if (!(selectedTask[0].status in newObj)) newObj[selectedTask[0].status] = []
 
-  const selectedTaskStatus = selectedTask[0].status
-  // console.log(selectedTaskStatus)
-  const taskIndex = newObj[selectedTaskInitialStatus].findIndex(task => {
+  // gets selected task
+  let selectedTask = selectedTaskArr[0][0];
+  const getIndexSelectedTask = data[selectedTask.status].findIndex(task => {
     if (task.id === selected) {
       return task;
     }
   });
 
-  const taskGroup = newObj[selectedTaskInitialStatus]
-  // deletes item
-  taskGroup.splice(taskIndex, 1)
+  // deletes selected task of the list
+  data[selectedTask.status].splice(getIndexSelectedTask, 1);
 
+  // changes status of selected task
+  selectedTask.status = newStatus;
 
-  const newTaskGroup = newObj[selectedTaskStatus]
-  // adds item into new task group
-  newTaskGroup.splice(drop, 0, selectedTask[0]);
+  // // adds item into new task group
+  data[selectedTask.status].splice(drop, 0, selectedTask);
 
-  return newObj;
+  return data;
 };
 
 module.exports = { taskBoardArrManipulation };
