@@ -1,14 +1,30 @@
 import React from "react";
-import "./App.css";
+import { ThemeContext, themes } from "./components/ThemeContext.jsx";
+import ThemedButton from "./components/Button.jsx";
+import Toolbar from "./components/Toolbar.jsx";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Title</h1>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    theme: themes.light
+  };
+
+  toggleTheme = () => {
+    this.setState(state => ({
+      theme: state.theme === themes.dark ? themes.light : themes.dark
+    }));
+  };
+
+  render() {
+    return (
+      <div>
+        <h1>Hello</h1>
+        <ThemeContext.Provider value={this.state.theme}>
+          <Toolbar toggleTheme={this.toggleTheme} />
+        </ThemeContext.Provider>
+        <ThemedButton />
+      </div>
+    );
+  }
 }
 
 export default App;
