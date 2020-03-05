@@ -2,10 +2,12 @@ import React from "react";
 import { ThemeContext, themes } from "./components/ThemeContext.jsx";
 import ThemedButton from "./components/Button.jsx";
 import Toolbar from "./components/Toolbar.jsx";
+import ThemeTogglerButton from "./components/ThemeToggler";
 
 class App extends React.Component {
   state = {
-    theme: themes.light
+    theme: themes.light,
+    toggleTheme: this.toggleTheme
   };
 
   toggleTheme = () => {
@@ -18,13 +20,22 @@ class App extends React.Component {
     return (
       <div>
         <h1>Hello</h1>
-        <ThemeContext.Provider value={this.state.theme}>
+        <ThemeContext.Provider value={this.state}>
           <Toolbar toggleTheme={this.toggleTheme} />
+          <Content></Content>
         </ThemeContext.Provider>
         <ThemedButton />
       </div>
     );
   }
+}
+
+function Content() {
+  return (
+    <div>
+      <ThemeTogglerButton />
+    </div>
+  );
 }
 
 export default App;

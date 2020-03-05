@@ -11,6 +11,10 @@ export const themes = {
   }
 };
 
-const ThemeContext = React.createContext(themes.dark);
+// This is like setting state, so that it could be passed to different components
+const ThemeContext = React.createContext({
+  themes: themes.dark,
+  toggleTheme: () => {}
+});
 
 export { ThemeContext };
