@@ -1,0 +1,28 @@
+version: "3.7"
+
+services:
+  app:
+    # builds the dockerfile
+    build: .
+    # this is needed for interactive command line
+    stdin_open: true
+    # tty opens interactive command line
+    tty: true
+    # you can image the -'s are items in an array
+    environment: 
+      # server is passed in and docker finds the server
+      - REDIS_URL=redis://server
+      # makes sure server is running first
+    depends_on: [server]
+  server:
+    image: redis:alpine
+    # doesn't seem like this line is needed any more
+    # command: ['redis-server', '--appendonly', 'yes']
+    volumes: 
+      # takes whatever is in the quests volume and puts it in data
+      - quests:/data
+
+
+# creates a volume
+volumes:
+  quests:

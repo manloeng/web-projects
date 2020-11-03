@@ -1,0 +1,9 @@
+version: "3.7"
+
+services:
+  server:
+    image: redis:alpine
+  client:
+    image: redis:alpine
+    command: ['redis-cli', '-h', 'server']
+    depends_on: [server]
