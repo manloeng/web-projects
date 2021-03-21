@@ -1,0 +1,20 @@
+.fieldContainer {
+  background-color: #f8f8fd;
+  text-align: center;
+  width: 95%;
+  border: 2.5px solid black;
+  border-radius: 0.5rem;
+  margin: auto;
+  padding: 1.5rem;
+}
+
+.fieldContainer table th {
+  border: 1px solid black;
+  width: 100%;
+  margin: auto;
+  padding: 1rem;
+}
+
+.canBreed {
+  background: #4ed67b;
+}

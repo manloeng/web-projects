@@ -1,0 +1,39 @@
+.submit {
+  width: 25%;
+}
+
+.formSubmit {
+  background-color: #4ed67b;
+  width: 100px;
+}
+
+.submit:hover {
+  background-color: #4ed67b;
+}
+
+.cancel {
+  width: 25%;
+  background-color: rgb(214, 88, 88);
+}
+
+.formCancel {
+  width: 100px;
+  background-color: rgb(214, 88, 88);
+}
+
+.formCancel:hover {
+  background-color: rgb(175, 43, 43);
+}
+
+.cancel:hover {
+  background-color: rgb(175, 43, 43);
+}
+
+.save {
+  text-align: center;
+  background-color: #4ed67b;
+}
+
+.save:hover {
+  background-color: #34a85b;
+}
